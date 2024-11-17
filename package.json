@@ -2,17 +2,19 @@
   "name": "the scotratel",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pron": "next build && next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
     "@supabase/supabase-js": "^2.46.1",
     "date-fns": "^4.1.0",
-    "next": "15.0.2",
+    "next": "^15.0.3",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028"
   },

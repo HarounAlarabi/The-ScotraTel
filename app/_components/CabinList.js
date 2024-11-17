@@ -1,7 +1,10 @@
+import { unstable_noStore as noStore } from "next/cache";
+
 import { getCabins } from "@/app/_lib/data-service";
 import CabinCard from "@/app/_components/CabinCard";
 
-export async function CabinList() {
+export async function CabinList({ filter }) {
+  noStore();
   const cabins = await getCabins();
 
   if (!cabins.length) return null;

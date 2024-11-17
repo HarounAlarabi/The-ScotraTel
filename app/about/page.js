@@ -1,7 +1,16 @@
 import Image from "next/image";
 import image1 from "@/public/about-1.jpg";
+import Link from "next/link";
+import { getCabins } from "../_lib/data-service";
 
-export default function Page() {
+export const revalidate = 86400;
+export default async function Page() {
+  const cabins = await getCabins();
+
+  const cabinsNum = cabins.length;
+
+  console.log(cabinsNum);
+
   return (
     <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
       <div className="col-span-3">
@@ -18,11 +27,11 @@ export default function Page() {
             and creating lasting memories with family.
           </p>
           <p>
-            Our 8 luxury cabins provide a cosy base, yet the true sense of
-            freedom and tranquillity lies in the surrounding landscapes. Wander
-            through unique Dragon’s Blood forests, breathe in the fresh ocean
-            breeze, and gaze at the stars from the warmth of a campfire or your
-            private deck.
+            Our {cabinsNum} luxury cabins provide a cosy base, yet the true
+            sense of freedom and tranquillity lies in the surrounding
+            landscapes. Wander through unique Dragon’s Blood forests, breathe in
+            the fresh ocean breeze, and gaze at the stars from the warmth of a
+            campfire or your private deck.
           </p>
           <p>
             This is where unforgettable moments are crafted, embraced by the
@@ -71,12 +80,12 @@ export default function Page() {
           </p>
 
           <div>
-            <a
+            <Link
               href="/cabins"
               className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Explore our luxury cabins
-            </a>
+            </Link>
           </div>
         </div>
       </div>

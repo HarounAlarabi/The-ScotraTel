@@ -7,11 +7,10 @@ const nextConfig = {
         hostname: "kkegsgshjfgaxkifdqly.supabase.co",
         port: "",
         pathname: "/storage/v1/object/public/cabin-images/**",
-
-        //kkegsgshjfgaxkifdqly.supabase.co/storage/v1/object/public/cabin-images/cabin-006.jpg
       },
     ],
   },
+  // output: "export",
 };
 
 export default nextConfig;
