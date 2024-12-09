@@ -36,13 +36,10 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <div className="flex-1 px-8 py-12 grid ">
-          <main className="max-w-7xl mx-auto w-full ">
+          <main className="max-w-7xl mx-auto w-full text-sm">
             <ReservationProvider>{children}</ReservationProvider>
           </main>
         </div>
-        <footer>
-          <p>&copy; 2024 The SocatraTel</p>
-        </footer>
       </body>
     </html>
   );
