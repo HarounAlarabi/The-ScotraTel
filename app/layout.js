@@ -1,13 +1,6 @@
 import "@/app/_styles/globals.css";
 import Header from "@/app/_components/Header";
-
-//import { Barlow_Condensed } from "next/font/google";
-
-// const barlowCondensed = Barlow_Condensed({
-//   subsets: ["latin"],
-//   display: "swap",
-//   weight: ["100", "600", "700", "800", "900"],
-// });
+import { Analytics } from "@vercel/analytics/next";
 
 //import Uploader from "./_lib/Uploader";
 import { Merienda } from "next/font/google";
@@ -40,6 +33,7 @@ export default function RootLayout({ children }) {
             <ReservationProvider>{children}</ReservationProvider>
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
