@@ -10,17 +10,16 @@ export default function Page() {
         fill
         alt="Mountains and forests with two cabins"
         placeholder="blur"
-        className=" object-fill"
+        className="object-cover object-top"
       />
 
       <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-20 tracking-tight font-normal">
+        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
           Welcome to paradise.
         </h1>
-
         <Link
           href="/cabins"
-          className="px-8 py-4 text-primary-50 text-lg font-semibold hover:bg-accent-600 rounded-full border bg-accent-600 transition-all mt-11"
+          className="bg-accent-500 px-8 py-6 rounded-full text-slate-200 text-lg font-semibold hover:bg-accent-600 transition-all"
         >
           Explore luxury cabins
         </Link>
